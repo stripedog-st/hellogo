@@ -12,7 +12,7 @@ BINARY_UNIX=$(BINARY_NAME)_windows
 all: build
 
 build:
-	$(GOBUILD) -o $(BINARY_NAME) -v /hello.go
+	$(GOBUILD) -o $(BINARY_NAME) -v hello.go
   
   #// expands to: "go build -o mybinary -v"
 
