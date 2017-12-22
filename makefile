@@ -12,7 +12,10 @@ BINARY_UNIX=$(BINARY_NAME)_windows
 all: build
 
 build:
-	$(GOBUILD) -o $(BINARY_NAME) -v hello.go
+	#$(GOBUILD) -o $(BINARY_NAME) -v hello.go
+	docker build -t hello.go .
+	docker run -it --rm --name my-running-app humblebooks
+	docker ps
   
   #// expands to: "go build -o mybinary -v"
 
