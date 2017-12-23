@@ -14,7 +14,7 @@ all: build
 build:
 	#$(GOBUILD) -o $(BINARY_NAME) -v hello.go
 	docker build -t humblebooks .
-	docker run -ti --rm  --name testapp-hellogo humblebooks
+	docker run --rm  --name testapp-hellogo humblebooks
 	docker ps
   
   #// expands to: "go build -o mybinary -v"
