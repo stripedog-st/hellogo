@@ -13,7 +13,7 @@ all: build
 
 build:
 	#$(GOBUILD) -o $(BINARY_NAME) -v hello.go
-	docker build -t hello.go .
+	docker build -t humblebooks .
 	docker run -it --rm --name my-running-app humblebooks
 	docker ps
   
