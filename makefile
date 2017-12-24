@@ -16,7 +16,7 @@ build:
 	docker build -t mw-go-1 .
 	kubectl create -f mw-go-1-deploy.yaml
 	#docker run --rm  --name testapp-hellogo humblebooks
-	docker ps
+	#docker ps
   
   #// expands to: "go build -o mybinary -v"
 
