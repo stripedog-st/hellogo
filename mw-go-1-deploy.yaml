@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mw-go-1-deploy
+  namespace: madwater-rd
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gonode1
+    spec:
+      containers:
+      - name: mw-go-1-container
+        image: mw-go-1:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8071
+          protocol: TCP

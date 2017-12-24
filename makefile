@@ -13,8 +13,9 @@ all: build
 
 build:
 	#$(GOBUILD) -o $(BINARY_NAME) -v hello.go
-	docker build -t humblebooks .
-	docker run --rm  --name testapp-hellogo humblebooks
+	docker build -t mw-go-1 .
+	kubectl create -f mw-go-1-deploy.yaml
+	#docker run --rm  --name testapp-hellogo humblebooks
 	docker ps
   
   #// expands to: "go build -o mybinary -v"

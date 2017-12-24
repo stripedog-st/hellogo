@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+    name: mw-go-1-service
+    namespace: madwater-rd
+spec:
+    ports:
+    - protocol: TCP
+      port: 8071
+      targetPort: 8071
+    selector:
+        app: gonode1
+    type: NodePort
+    sessionAffinity: None
+    externalTrafficPolicy: Cluster
