@@ -7,7 +7,7 @@ import(
 )
 
 func indexHandler( w http.ResponseWriter, r *http.Request){
-fmt.Fprintf(w, "Go Node 1. I'm running on %s with an %s CPU ", runtime.GOOS,runtime.GOARCH)
+fmt.Fprintf(w, "Go Node 1. Eventually updating to HumbleBundle Go. I'm running on %s with an %s CPU ", runtime.GOOS,runtime.GOARCH)
 
 }
 
