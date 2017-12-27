@@ -13,8 +13,10 @@ all: build
 
 build:
 	#$(GOBUILD) -o $(BINARY_NAME) -v hello.go
+	
 	docker build -t mw-go-1 .
-	kubectl create -f mw-go-1-deploy.yaml
+	kubectl delete deploy mw-go-1-deploy --namespace madwater-rd
+	kubectl create -f mw-go-1-deploy.yaml --namespace madwater-rd
 clean:
 	$(GOCLEAN)
 	rm -f $(BINARY_NAME)
