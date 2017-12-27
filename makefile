@@ -22,7 +22,7 @@ dockerize:
 	docker build -t $(DOCKER_CONTAINER) .
 
 deploy-dev:
-	kubectl delete deploy $(DEPLOY_NAME) --namespace $(DEPLOY_NAMESPACE)
+	- kubectl delete deploy $(DEPLOY_NAME) --namespace $(DEPLOY_NAMESPACE)
 	kubectl create -f $(DEPLOY_YAML) --namespace $(DEPLOY_NAMESPACE)
 
 clean:
