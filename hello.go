@@ -7,7 +7,7 @@ import(
 )
 
 func indexHandler( w http.ResponseWriter, r *http.Request){
-fmt.Fprintf(w, "Go Node 1. With some changes. I'm running on %s with an %s CPU ", runtime.GOOS,runtime.GOARCH)
+fmt.Fprintf(w, "Go Node 1. This clearly won't go sideways. I'm running on %s with an %s CPU ", runtime.GOOS,runtime.GOARCH)
 
 }
 
